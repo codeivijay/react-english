@@ -4,7 +4,7 @@ import { Client, Databases, Storage, Query, ID } from "appwrite";
 export class Service {
   client = new Client();
   databases;
-  bucket;
+  bucket; 
 
   constructor() {
     this.client
@@ -22,7 +22,7 @@ export class Service {
         slug
       );
     } catch (error) {
-      console.log("Appwrite service :: getPost() :: ", error);
+      //console.log("Appwrite service :: getPost() :: ", error);
       return false;
     }
   }
@@ -35,7 +35,7 @@ export class Service {
         queries
       );
     } catch (error) {
-      console.log("Appwrite service :: getPosts() :: ", error);
+      //console.log("Appwrite service :: getPosts() :: ", error);
       return false;
     }
   }
@@ -55,7 +55,7 @@ export class Service {
         }
       );
     } catch (error) {
-      console.log("Appwrite service :: createPost() :: ", error);
+      //console.log("Appwrite service :: createPost() :: ", error);
       return false;
     }
   }
@@ -74,7 +74,7 @@ export class Service {
         }
       );
     } catch (error) {
-      console.log("Appwrite service :: updateDocument() :: ", error);
+      //console.log("Appwrite service :: updateDocument() :: ", error);
       return false;
     }
   }
@@ -88,7 +88,7 @@ export class Service {
       );
       return true;
     } catch (error) {
-      console.log("Appwrite service :: deleteDocument() :: ", error);
+      //console.log("Appwrite service :: deleteDocument() :: ", error);
       return false;
     }
   }
@@ -103,7 +103,7 @@ export class Service {
         file
       );
     } catch (error) {
-      console.log("Appwrite service :: uploadFile() :: ", error);
+      //console.log("Appwrite service :: uploadFile() :: ", error);
       return false;
     }
   }
@@ -112,7 +112,7 @@ export class Service {
     try {
       return await this.bucket.deleteFile(config.appwriteBucketId, fileId);
     } catch (error) {
-      console.log("Appwrite service :: deleteFile() :: ", error);
+      //console.log("Appwrite service :: deleteFile() :: ", error);
       return false;
     }
   }
